@@ -5,7 +5,8 @@ function init() {
 
   document.body.addEventListener('keydown', (e) => {
     let index = array.length
-    let num = parseInt(e.which)
+    let num = parseInt(e.which || e.detail)
+    // debugger
     if (num === code[index]) {
       array.push(num)
     } else {
